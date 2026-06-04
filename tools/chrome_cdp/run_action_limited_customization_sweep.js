@@ -4,7 +4,9 @@ const WebSocket = require("ws");
 
 const PROJECT = path.resolve(__dirname, "../..");
 const endpoint = process.env.CDP_ENDPOINT || "http://127.0.0.1:9222";
-const OUT_DIR = path.join(PROJECT, "behavior_worklogs", "03_wave1_crushftp", "experiments");
+const behaviorWorklog = process.env.BEHAVIOR_WORKLOG || "03_wave1_crushftp";
+const behaviorLabel = process.env.BEHAVIOR_LABEL || "Wave 1 - CrushFTP";
+const OUT_DIR = path.join(PROJECT, "behavior_worklogs", behaviorWorklog, "experiments");
 const RUN_ID = new Date().toISOString().replace(/[-:]/g, "").replace(/\..+/, "").replace("T", "_");
 
 const prompts = {
@@ -322,7 +324,7 @@ function markdown(results) {
     "# Action-Limited Customization Sweep",
     "",
     `- run_id: ${RUN_ID}`,
-    "- behavior: Wave 1 - CrushFTP",
+    `- behavior: ${behaviorLabel}`,
     `- count: ${results.length}`,
     "",
     "| # | id | label | result | installed | url |",
