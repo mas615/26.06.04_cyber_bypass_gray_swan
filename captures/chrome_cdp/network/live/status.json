@@ -1,0 +1,26 @@
+{
+  "state": "running",
+  "pid": 27456,
+  "startedAt": "2026-06-04T04:46:56.480Z",
+  "updatedAt": "2026-06-04T09:16:30.883Z",
+  "tab": {
+    "id": "3A184B72A5AEA5A912A60274531C483A",
+    "title": "Cyber Bypass Chat | Gray Swan Arena | Gray Swan AI",
+    "url": "https://app.grayswan.ai/arena/challenge/cyber-bypass/chat/6a20f5ddca0723c6549e7a3c"
+  },
+  "match": "app.grayswan.ai",
+  "urlIncludes": "app.grayswan.ai",
+  "eventCount": 14082,
+  "sseCount": 0,
+  "requestCount": 3934,
+  "files": {
+    "status": "C:\\Users\\K123\\Desktop\\00. 데일리\\26.06.02(화) cyber classifier\\captures\\chrome_cdp\\network\\live\\status.json",
+    "events": "C:\\Users\\K123\\Desktop\\00. 데일리\\26.06.02(화) cyber classifier\\captures\\chrome_cdp\\network\\live\\events.jsonl",
+    "sse": "C:\\Users\\K123\\Desktop\\00. 데일리\\26.06.02(화) cyber classifier\\captures\\chrome_cdp\\network\\live\\sse_events.jsonl",
+    "requests": "C:\\Users\\K123\\Desktop\\00. 데일리\\26.06.02(화) cyber classifier\\captures\\chrome_cdp\\network\\live\\requests.json",
+    "requestPayload": "C:\\Users\\K123\\Desktop\\00. 데일리\\26.06.02(화) cyber classifier\\captures\\chrome_cdp\\network\\live\\request.json",
+    "responsePayload": "C:\\Users\\K123\\Desktop\\00. 데일리\\26.06.02(화) cyber classifier\\captures\\chrome_cdp\\network\\live\\response.json",
+    "apiTraceData": "C:\\Users\\K123\\Desktop\\00. 데일리\\26.06.02(화) cyber classifier\\captures\\chrome_cdp\\network\\live\\api_trace_data.json",
+    "apiTraceRaw": "C:\\Users\\K123\\Desktop\\00. 데일리\\26.06.02(화) cyber classifier\\captures\\chrome_cdp\\network\\live\\api_trace_data_raw.txt"
+  }
+}

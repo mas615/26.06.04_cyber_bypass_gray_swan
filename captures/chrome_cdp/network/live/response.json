@@ -1,0 +1,23 @@
+{
+  "id": "msg_01WhfX5vgQbZkmZnYHzbxePJ",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-venus-q-v2-bb-p",
+  "stop_reason": "refusal",
+  "content": [],
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 25355,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 25355,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 6,
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    }
+  }
+}

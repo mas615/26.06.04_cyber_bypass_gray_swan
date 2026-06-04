@@ -1,0 +1,28 @@
+﻿{
+    "id":  "msg_01LwL1hxenm1fq5mZiY19YYh",
+    "type":  "message",
+    "role":  "assistant",
+    "model":  "claude-venus-q-v2-bb-p",
+    "stop_reason":  "end_turn",
+    "content":  [
+                    {
+                        "type":  "text",
+                        "text":  "안녕하세요! 무엇을 도와드릴까요?"
+                    }
+                ],
+    "usage":  {
+                  "input_tokens":  2,
+                  "cache_creation_input_tokens":  24695,
+                  "cache_read_input_tokens":  0,
+                  "cache_creation":  {
+                                         "ephemeral_5m_input_tokens":  24695,
+                                         "ephemeral_1h_input_tokens":  0
+                                     },
+                  "output_tokens":  23,
+                  "service_tier":  "standard",
+                  "inference_geo":  "global",
+                  "output_tokens_details":  {
+                                                "thinking_tokens":  0
+                                            }
+              }
+}

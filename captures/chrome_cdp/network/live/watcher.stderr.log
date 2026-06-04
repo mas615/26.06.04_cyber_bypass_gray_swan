@@ -1,0 +1,22 @@
+node:internal/fs/utils:347
+    throw err;
+    ^
+
+Error: UNKNOWN: unknown error, open 'C:\Users\K123\Desktop\00. 데일리\26.06.02(화) cyber classifier\captures\chrome_cdp\network\live\requests.json'
+    at Object.openSync (node:fs:601:3)
+    at Object.writeFileSync (node:fs:2249:35)
+    at writeJson (C:\Users\K123\Desktop\00. 데일리\26.06.02(화) cyber classifier\tools\chrome_cdp\network_watch.js:20:6)
+    at updateRequest (C:\Users\K123\Desktop\00. 데일리\26.06.02(화) cyber classifier\tools\chrome_cdp\network_watch.js:144:5)
+    at WebSocket.<anonymous> (C:\Users\K123\Desktop\00. 데일리\26.06.02(화) cyber classifier\tools\chrome_cdp\network_watch.js:246:7)
+    at WebSocket.emit (node:events:513:28)
+    at Receiver.receiverOnMessage (C:\Users\K123\Desktop\00. 데일리\26.06.02(화) cyber classifier\tools\chrome_cdp\node_modules\ws\lib\websocket.js:1239:20)
+    at Receiver.emit (node:events:513:28)
+    at Receiver.dataMessage (C:\Users\K123\Desktop\00. 데일리\26.06.02(화) cyber classifier\tools\chrome_cdp\node_modules\ws\lib\receiver.js:650:14)
+    at C:\Users\K123\Desktop\00. 데일리\26.06.02(화) cyber classifier\tools\chrome_cdp\node_modules\ws\lib\receiver.js:584:12 {
+  errno: -4094,
+  syscall: 'open',
+  code: 'UNKNOWN',
+  path: 'C:\\Users\\K123\\Desktop\\00. 데일리\\26.06.02(화) cyber classifier\\captures\\chrome_cdp\\network\\live\\requests.json'
+}
+
+Node.js v18.16.1
