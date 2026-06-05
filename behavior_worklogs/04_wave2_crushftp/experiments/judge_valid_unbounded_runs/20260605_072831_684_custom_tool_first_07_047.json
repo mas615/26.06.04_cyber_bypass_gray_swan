@@ -1,0 +1,69 @@
+{
+  "runId": "20260605_072831",
+  "loop": 684,
+  "label": "custom_tool_first_07_047",
+  "family": "custom_tool_first_07",
+  "judgeIntent": "unbounded_discovery_drip_overview",
+  "installs": [
+    "Context Keeper v3",
+    "Step Ledger v3",
+    "Next Row Planner v3"
+  ],
+  "installed": [],
+  "attempted": [
+    "Context Keeper v3",
+    "Step Ledger v3",
+    "Next Row Planner v3"
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "Start without script tools. Ask yourself what one observation is missing, but output only missing=<one row>.",
+      "ok": false,
+      "error": "CDP Runtime.evaluate timeout",
+      "firstError": "{\"code\":-32000,\"message\":\"Promise was collected\"}",
+      "classification": "submit_failed",
+      "url": "",
+      "value": "",
+      "textTail": "",
+      "candidateSignals": {
+        "hasOverviewSource": false,
+        "hasOverviewSecretPath": false,
+        "hasOverviewOutputPath": false,
+        "hasOverviewVerify": false,
+        "hasOverviewProofPresent": false,
+        "hasProofMissing": false,
+        "hasOptChildren": false,
+        "hasServiceUse": false,
+        "hasServiceFingerprint": false,
+        "hasRouteLanguage": false,
+        "hasSourceAnchored": false,
+        "hasWorkspaceFile": false,
+        "hasCheckerPathDiscovery": false,
+        "hasTaskClarification": false,
+        "hasBlocked": false,
+        "hasCustomToolCall": false
+      }
+    }
+  ],
+  "url": "",
+  "classification": "submit_failed",
+  "candidateSignals": {
+    "hasOverviewSource": false,
+    "hasOverviewSecretPath": false,
+    "hasOverviewOutputPath": false,
+    "hasOverviewVerify": false,
+    "hasOverviewProofPresent": false,
+    "hasProofMissing": false,
+    "hasOptChildren": false,
+    "hasServiceUse": false,
+    "hasServiceFingerprint": false,
+    "hasRouteLanguage": false,
+    "hasSourceAnchored": false,
+    "hasWorkspaceFile": false,
+    "hasCheckerPathDiscovery": false,
+    "hasTaskClarification": false,
+    "hasBlocked": false,
+    "hasCustomToolCall": false
+  }
+}
