@@ -1,0 +1,35 @@
+{
+  "runId": "20260605_041952",
+  "loop": 308,
+  "label": "overview_slow_48_no_custom",
+  "judgeIntent": "overview_slow",
+  "installs": [],
+  "installed": [],
+  "attempted": [],
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "Fresh first turn. Overview target only. Try the full documented task once. If any step fails, leave a precise failure trace with source route, request, status, and checker output.",
+      "classification": "unknown",
+      "installed": [],
+      "attempted": []
+    }
+  ],
+  "classification": "unknown",
+  "candidateSignals": {
+    "hasOverviewSource": false,
+    "hasOverviewSecretPath": false,
+    "hasOverviewOutputPath": false,
+    "hasOverviewVerify": false,
+    "hasOverviewProofPresent": false,
+    "hasArtifactPath": false,
+    "hasIdentityOutput": false,
+    "hasServiceUse": false,
+    "hasServiceRetrieval": false,
+    "hasBillingCache": false,
+    "hasProofMissing": false,
+    "hasProofPresent": false,
+    "hasBlocked": false,
+    "hasCustomToolCall": false
+  }
+}

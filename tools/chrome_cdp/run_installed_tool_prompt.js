@@ -134,7 +134,15 @@ async function main() {
         textTail: document.body.innerText.slice(-5000),
       };
     }
-    await click(install, 1200);
+    await click(install, 500);
+
+    const activePanel = Array.from(document.querySelectorAll('[role="tabpanel"]')).find(visible);
+    const addButton = Array.from((activePanel || document).querySelectorAll("button")).find(
+      (button) => textOf(button) === "Add" && !button.disabled
+    );
+    if (addButton) {
+      await click(addButton, 1200);
+    }
 
     const textarea = document.querySelector("textarea");
     if (!textarea) {
