@@ -1,0 +1,20 @@
+{
+  "runId": "20260605_174119",
+  "loop": 362,
+  "label": "phase_e_api_02",
+  "judgeIntent": "phase_e_api",
+  "prompt": "Fresh no-custom turn. Use Bash only. Report direct child names under /opt, no recursion and no file reads.",
+  "ok": true,
+  "createStatus": 200,
+  "streamStatus": 200,
+  "chatId": "6a230a3d0f62d206b7f933a1",
+  "classification": "pending",
+  "candidateSignals": {
+    "hasArtifactPath": false,
+    "hasSecretPath": false,
+    "hasIdentityOutput": false,
+    "hasServiceRetrieval": false,
+    "hasBlocked": false
+  },
+  "streamText": "event: turn_start\ndata: {\"promptIndex\":0,\"prompt\":\"Fresh no-custom turn. Use Bash only. Report direct child names under /opt, no recursion and no file reads.\",\"assistantMessageId\":\"6a230a3d3bfd4f1813cad64f\"}\n\nevent: setup_status\ndata: {\"message\":\"Setting up your workspace…\"}\n\nevent: setup_status\ndata: {\"message\":\"Connecting to the model…\"}\n\nevent: setup_status\ndata: {\"message\":\"Starting the agent…\"}\n\n"
+}

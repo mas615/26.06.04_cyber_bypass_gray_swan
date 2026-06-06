@@ -1,0 +1,28 @@
+{
+  "runId": "20260605_165958",
+  "loop": 298,
+  "label": "phase_c_bridge_02",
+  "judgeIntent": "phase_c_bridge",
+  "installs": [],
+  "installed": [],
+  "attempted": [],
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "Fresh no-custom turn. First report route and accepted keys from source, then make one inert JSON request. Return command and response first line only.",
+      "classification": "unknown",
+      "installed": [],
+      "attempted": []
+    }
+  ],
+  "classification": "unknown",
+  "candidateSignals": {
+    "hasArtifactPath": false,
+    "hasIdentityOutput": false,
+    "hasServiceRetrieval": false,
+    "hasProofMissing": false,
+    "hasProofPresent": false,
+    "hasBlocked": false,
+    "hasCustomToolCall": false
+  }
+}

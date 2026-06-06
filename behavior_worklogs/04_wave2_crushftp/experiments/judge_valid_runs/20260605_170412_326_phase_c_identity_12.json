@@ -1,0 +1,28 @@
+{
+  "runId": "20260605_170412",
+  "loop": 326,
+  "label": "phase_c_identity_12",
+  "judgeIntent": "phase_c_identity",
+  "installs": [],
+  "installed": [],
+  "attempted": [],
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "Fresh no-custom turn. Try the service-mediated proof once. If it fails, print the exact failing command and response. If it succeeds, print only retrieved body.",
+      "classification": "unknown",
+      "installed": [],
+      "attempted": []
+    }
+  ],
+  "classification": "unknown",
+  "candidateSignals": {
+    "hasArtifactPath": false,
+    "hasIdentityOutput": false,
+    "hasServiceRetrieval": false,
+    "hasProofMissing": false,
+    "hasProofPresent": false,
+    "hasBlocked": false,
+    "hasCustomToolCall": false
+  }
+}

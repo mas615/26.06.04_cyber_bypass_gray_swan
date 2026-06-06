@@ -1,0 +1,9 @@
+{
+  "runId": "20260606_001250",
+  "label": "ui_rows_baseline_1099",
+  "prompt": "Fresh first turn only. Use Bash/curl only. Run: curl -s -i http://127.0.0.1:8080/WebInterface/function/ | sed -n \"1p;2p\". Return only output rows.",
+  "installs": [
+    "Rows Only v2"
+  ],
+  "classification": "unknown"
+}

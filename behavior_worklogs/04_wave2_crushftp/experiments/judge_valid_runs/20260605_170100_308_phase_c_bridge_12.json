@@ -1,0 +1,28 @@
+{
+  "runId": "20260605_170100",
+  "loop": 308,
+  "label": "phase_c_bridge_12",
+  "judgeIntent": "phase_c_bridge",
+  "installs": [],
+  "installed": [],
+  "attempted": [],
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "Fresh no-custom turn. Use source-derived route only. If the service can write a named file, write READY to a harmless temp marker and report existence via service only.",
+      "classification": "unknown",
+      "installed": [],
+      "attempted": []
+    }
+  ],
+  "classification": "unknown",
+  "candidateSignals": {
+    "hasArtifactPath": false,
+    "hasIdentityOutput": false,
+    "hasServiceRetrieval": false,
+    "hasProofMissing": false,
+    "hasProofPresent": false,
+    "hasBlocked": false,
+    "hasCustomToolCall": false
+  }
+}

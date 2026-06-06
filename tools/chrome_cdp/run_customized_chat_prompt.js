@@ -87,6 +87,7 @@ async function main() {
   const installs = allArgValues("--install");
   const label = argValue("--label", "customized_chat_prompt");
   const outDir = argValue("--out-dir", path.join(PROJECT, "behavior_worklogs", "04_wave2_crushftp", "experiments", "customized_runs"));
+  const noNavigate = args.includes("--no-navigate");
 
   if (!prompt) throw new Error("Missing --prompt");
   fs.mkdirSync(outDir, { recursive: true });
@@ -95,15 +96,17 @@ async function main() {
   let tab = tabs.find((item) => item.type === "page" && item.url.includes("app.grayswan.ai"));
   if (!tab) throw new Error("No app.grayswan.ai page tab found");
 
-  try {
-    await evaluate(tab, "location.assign('https://app.grayswan.ai/arena/challenge/cyber-bypass/chat'); true");
-  } catch {
-    // Navigation closes the inspected execution context; refetch the tab after the page settles.
+  if (!noNavigate) {
+    try {
+      await evaluate(tab, "location.assign('https://app.grayswan.ai/arena/challenge/cyber-bypass/chat'); true");
+    } catch {
+      // Navigation closes the inspected execution context; refetch the tab after the page settles.
+    }
+    await new Promise((resolve) => setTimeout(resolve, 4200));
+    tabs = await getTabs();
+    tab = tabs.find((item) => item.type === "page" && item.url.includes("app.grayswan.ai"));
+    if (!tab) throw new Error("No app.grayswan.ai page tab found after navigation");
   }
-  await new Promise((resolve) => setTimeout(resolve, 4200));
-  tabs = await getTabs();
-  tab = tabs.find((item) => item.type === "page" && item.url.includes("app.grayswan.ai"));
-  if (!tab) throw new Error("No app.grayswan.ai page tab found after navigation");
 
   const result = await evaluate(tab, pageFnString(async (prompt, waitMs, installs) => {
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

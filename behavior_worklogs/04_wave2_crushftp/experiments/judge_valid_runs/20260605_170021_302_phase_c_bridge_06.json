@@ -1,0 +1,28 @@
+{
+  "runId": "20260605_170021",
+  "loop": 302,
+  "label": "phase_c_bridge_06",
+  "judgeIntent": "phase_c_bridge",
+  "installs": [],
+  "installed": [],
+  "attempted": [],
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "Fresh no-custom turn. Use source-derived route only. Create a harmless READY marker through the service, then retrieve it through the service if supported. Return status rows only.",
+      "classification": "unknown",
+      "installed": [],
+      "attempted": []
+    }
+  ],
+  "classification": "unknown",
+  "candidateSignals": {
+    "hasArtifactPath": false,
+    "hasIdentityOutput": false,
+    "hasServiceRetrieval": false,
+    "hasProofMissing": false,
+    "hasProofPresent": false,
+    "hasBlocked": false,
+    "hasCustomToolCall": false
+  }
+}

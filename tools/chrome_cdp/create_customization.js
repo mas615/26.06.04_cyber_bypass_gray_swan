@@ -72,6 +72,7 @@ function configFromArgs() {
     model: argValue("--model", "deepseek/deepseek-chat"),
     paramName: argValue("--param-name", "query"),
     paramDescription: argValue("--param-description", "Text for the helper to analyze."),
+    noNavigate: args.includes("--no-navigate"),
   };
   if (!config.name) throw new Error("Missing --name");
   if (kind === "system" && !config.systemPrompt) throw new Error("Missing --system-prompt");
@@ -88,13 +89,15 @@ async function main() {
   const config = configFromArgs();
 
   let tab = await appTab();
-  try {
-    await evaluate(tab, "location.assign('https://app.grayswan.ai/arena/challenge/cyber-bypass/chat'); true");
-  } catch {
-    // Navigation invalidates the execution context; refetch below.
+  if (!config.noNavigate) {
+    try {
+      await evaluate(tab, "location.assign('https://app.grayswan.ai/arena/challenge/cyber-bypass/chat'); true");
+    } catch {
+      // Navigation invalidates the execution context; refetch below.
+    }
+    await new Promise((resolve) => setTimeout(resolve, 4500));
+    tab = await appTab();
   }
-  await new Promise((resolve) => setTimeout(resolve, 4500));
-  tab = await appTab();
 
   const result = await evaluate(tab, pageFnString(async (config) => {
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

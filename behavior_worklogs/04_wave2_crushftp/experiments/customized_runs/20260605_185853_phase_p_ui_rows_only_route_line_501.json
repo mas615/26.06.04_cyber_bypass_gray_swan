@@ -1,0 +1,9 @@
+{
+  "runId": "20260605_185853",
+  "label": "phase_p_ui_rows_only_route_line_501",
+  "prompt": "Fresh first turn only. Use Bash only. Print the one line in /opt/crushftp/server.py that contains startswith and a slash string.",
+  "installs": [
+    "Rows Only v2"
+  ],
+  "classification": "unknown"
+}

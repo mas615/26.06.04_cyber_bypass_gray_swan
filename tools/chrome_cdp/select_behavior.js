@@ -52,7 +52,8 @@ function pageFnString(fn, ...fnArgs) {
 }
 
 async function main() {
-  const waveLabel = argValue("--wave");
+  const rawWaveLabel = argValue("--wave");
+  const waveLabel = rawWaveLabel && !rawWaveLabel.startsWith("Wave ") ? `Wave ${rawWaveLabel}` : rawWaveLabel;
   const dateHint = argValue("--date-hint", waveLabel === "Wave 2" ? "Jun 4" : "May 30");
   const behaviorName = argValue("--behavior");
   if (!waveLabel || !behaviorName) throw new Error("Usage: --wave \"Wave 1\" --behavior \"CrushFTP\"");
@@ -72,7 +73,14 @@ async function main() {
     const controls = () => Array.from(document.querySelectorAll("button,[role=button],[role=option],a")).filter(visible);
     const click = async (element, wait = 800) => {
       element.scrollIntoView({ block: "center", inline: "center" });
-      element.click();
+      await sleep(100);
+      const rect = element.getBoundingClientRect();
+      const clientX = rect.left + rect.width / 2;
+      const clientY = rect.top + rect.height / 2;
+      element.dispatchEvent(new PointerEvent("pointerdown", { bubbles: true, clientX, clientY }));
+      element.dispatchEvent(new MouseEvent("mousedown", { bubbles: true, clientX, clientY }));
+      element.dispatchEvent(new MouseEvent("mouseup", { bubbles: true, clientX, clientY }));
+      element.dispatchEvent(new MouseEvent("click", { bubbles: true, clientX, clientY }));
       await sleep(wait);
     };
     const find = (predicate) => controls().find((element) => predicate(element, textOf(element)));
@@ -87,7 +95,7 @@ async function main() {
     }
 
     const wave = find((_, text) => text.includes(waveLabel) && text.includes(dateHint));
-    if (wave) await click(wave, 900);
+    if (wave) await click(wave, 1600);
 
     const behavior = find((_, text) => {
       const firstLine = text.split("\n")[0].trim();
@@ -99,6 +107,14 @@ async function main() {
       text === "Save" || element.getAttribute("aria-label") === "Save changes and apply settings"
     );
     if (save) await click(save, 1500);
+
+    const cancelSettings = find((element, text) =>
+      text === "Cancel" ||
+      text === "Close" ||
+      element.getAttribute("aria-label") === "Close challenge settings panel" ||
+      element.getAttribute("aria-label") === "Close"
+    );
+    if (cancelSettings) await click(cancelSettings, 700);
 
     const close = find((element, text) =>
       text === "Hide behavior details" ||
@@ -122,6 +138,7 @@ async function main() {
     return {
       clicked: { wave: Boolean(wave), behavior: Boolean(behavior), save: Boolean(save), close: Boolean(close), open: Boolean(open) },
       url: location.href,
+      selectedWave: (body.match(/(Wave \d+)\n[^\n]+\nEarth Capybara Legendary/) || [])[1] || "",
       selectedTop: (body.match(/Wave \d+\n([^\n]+)\nEarth Capybara Legendary/) || [])[1] || "",
       detailVerified: detailStart >= 0,
       detail: detailStart >= 0 ? body.slice(detailStart, detailStart + 1200) : "",

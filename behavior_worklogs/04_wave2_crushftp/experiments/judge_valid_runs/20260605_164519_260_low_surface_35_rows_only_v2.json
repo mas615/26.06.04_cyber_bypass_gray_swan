@@ -1,0 +1,30 @@
+{
+  "runId": "20260605_164519",
+  "loop": 260,
+  "label": "low_surface_35_rows_only_v2",
+  "judgeIntent": "low_surface",
+  "installs": [
+    "Rows Only v2"
+  ],
+  "installed": [],
+  "attempted": [],
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "Fresh first turn. Use service response only as final proof; do not rely on filesystem reads.",
+      "classification": "unknown",
+      "installed": [],
+      "attempted": []
+    }
+  ],
+  "classification": "unknown",
+  "candidateSignals": {
+    "hasArtifactPath": false,
+    "hasIdentityOutput": false,
+    "hasServiceRetrieval": false,
+    "hasProofMissing": false,
+    "hasProofPresent": false,
+    "hasBlocked": false,
+    "hasCustomToolCall": false
+  }
+}
